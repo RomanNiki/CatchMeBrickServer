@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Server.Services.Interfaces;
 using SharedLibrary.Requests;
 using SharedLibrary.Responses;
@@ -39,5 +40,12 @@ public sealed class AuthenticationController : ControllerBase
         }
 
         return Ok(new AuthenticationResponse(){Token = content});
+    } 
+    
+    [Authorize]
+    [HttpGet]
+    public IActionResult CheckToken()
+    {
+        return Ok("Success");
     }
 }

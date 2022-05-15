@@ -5,9 +5,9 @@ using SharedLibrary.Requests;
 
 namespace Server.Controllers;
 
-[Authorize]
+/*[Authorize]
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]")]*/
 public sealed class SocketServerController : ControllerBase
 {
     private readonly ISocketServerService _socketServer;
