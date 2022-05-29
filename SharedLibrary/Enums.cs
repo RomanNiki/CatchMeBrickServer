@@ -25,4 +25,16 @@
         PrimaryUse,
         Reload,
     }
+    
+    public enum WeaponType
+    {
+        Brick = 0,
+    }
+    
+    public enum Team
+    {
+        None = 0,
+        Red,
+        Green
+    }
 }
